@@ -70,7 +70,7 @@ export default function App() {
         if (msg.id === thinkingMsgId) {
           return {
             ...msg,
-            text: "System Error: Unable to connect to global market data streams. Please check your connection or API key.",
+            text: "系統錯誤：無法連接全球市場數據流。請檢查您的網路連線或 API 金鑰。",
             isThinking: false
           };
         }
@@ -91,10 +91,10 @@ export default function App() {
   };
 
   const suggestions = [
-    "Analyze NVIDIA's supply chain risks and recent insider trading.",
-    "What is the sentiment on Reddit regarding Tesla given the recent oil price drop?",
-    "Compare Gold vs. Bitcoin as an inflation hedge right now.",
-    "Give me a strategic outlook on the Semiconductor industry."
+    "分析 NVIDIA (輝達) 的供應鏈風險與近期內部人交易情況。",
+    "考慮到近期油價波動，Reddit 論壇上對 Tesla 的多空情緒如何？",
+    "比較現在黃金 vs 比特幣作為抗通膨避險資產的優劣。",
+    "請給我關於半導體產業下一季的戰略展望與潛在風險。"
   ];
 
   return (
@@ -107,17 +107,17 @@ export default function App() {
           </div>
           <div>
             <h1 className="font-bold text-lg tracking-tight text-white">MarketMind <span className="text-emerald-500">AI</span></h1>
-            <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">Strategic Intelligence Unit</p>
+            <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">全方位市場戰略軍師</p>
           </div>
         </div>
         <div className="flex items-center gap-4 text-xs font-mono text-slate-500">
            <div className="flex items-center gap-1.5">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-              <span>SYSTEM ONLINE</span>
+              <span>系統連線正常</span>
            </div>
            <div className="hidden md:flex items-center gap-1.5">
               <IconGlobe className="w-3 h-3" />
-              <span>WEB GROUNDING: ENABLED</span>
+              <span>即時聯網：已啟用</span>
            </div>
         </div>
       </header>
@@ -137,12 +137,12 @@ export default function App() {
                 <IconSearch className="w-12 h-12 text-emerald-400" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Institutional-Grade <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Market Intelligence</span>
+                機構級市場情報 <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">AI 戰略指揮中心</span>
               </h2>
               <p className="text-slate-400 text-lg max-w-xl leading-relaxed">
-                I act as your digital hedge fund strategist. I synthesize real-time web data, social sentiment, 
-                macro trends (Gold, Oil, Crypto), and fundamental analysis to provide clear investment verdicts.
+                我是您的 AI 投資軍師。我將整合即時網路數據、社群情緒、
+                總體經濟 (黃金、原油、加密貨幣) 及基本面分析，為您提供最精準的戰略建議。
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-2xl mt-8">
@@ -179,7 +179,7 @@ export default function App() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyDown={handleKeyPress}
-                placeholder="Ask about a stock, sector, or global event..."
+                placeholder="詢問關於美股、產業趨勢或全球經濟事件..."
                 className="flex-1 bg-transparent border-none text-slate-100 placeholder-slate-500 px-6 py-4 focus:outline-none text-base"
                 disabled={isLoading}
               />
@@ -197,7 +197,7 @@ export default function App() {
             </div>
             <div className="mt-3 text-center">
                <p className="text-[10px] text-slate-600 font-mono">
-                 AI-generated analysis based on real-time data. Not financial advice. Do your own due diligence.
+                 AI 分析基於即時數據生成。投資市場風險自負，本內容僅供參考，非投資建議。
                </p>
             </div>
           </div>

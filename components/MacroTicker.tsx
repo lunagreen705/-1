@@ -3,12 +3,12 @@ import React from 'react';
 const MacroTicker: React.FC = () => {
   // Mock data for the visual ticker - in a real app this could be fetched or updated by the AI
   const items = [
-    { label: 'S&P 500', val: 'WATCH', color: 'text-slate-400' },
-    { label: 'VIX', val: 'MONITOR', color: 'text-rose-400' },
-    { label: 'GOLD', val: 'MACRO', color: 'text-amber-400' },
-    { label: 'CRUDE', val: 'SUPPLY', color: 'text-slate-400' },
-    { label: 'BTC/USD', val: 'RISK', color: 'text-indigo-400' },
-    { label: '10Y YIELD', val: 'RATES', color: 'text-emerald-400' },
+    { label: 'S&P 500', val: '觀察中', color: 'text-slate-400' },
+    { label: 'VIX (恐慌)', val: '監控中', color: 'text-rose-400' },
+    { label: '黃金 GOLD', val: '避險', color: 'text-amber-400' },
+    { label: '原油 CRUDE', val: '供給面', color: 'text-slate-400' },
+    { label: 'BTC/USD', val: '風險資產', color: 'text-indigo-400' },
+    { label: '10年期美債', val: '利率政策', color: 'text-emerald-400' },
   ];
 
   return (

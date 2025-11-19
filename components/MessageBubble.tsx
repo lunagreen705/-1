@@ -31,7 +31,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
             
             {/* Name Label */}
             <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${isUser ? 'text-indigo-400 text-right' : 'text-emerald-400'}`}>
-              {isUser ? 'You' : 'MarketMind AI'}
+              {isUser ? '你' : 'MarketMind AI 軍師'}
             </span>
 
             {/* Loading State */}
@@ -40,7 +40,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-                <span className="text-xs text-slate-500 ml-2 font-mono animate-pulse">Analyzing global markets...</span>
+                <span className="text-xs text-slate-500 ml-2 font-mono animate-pulse">正在分析全球市場數據...</span>
               </div>
             ) : (
                <MarkdownRenderer content={message.text} />
@@ -53,7 +53,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
              <div className="mt-3 ml-1 w-full">
                <div className="flex items-center gap-2 mb-2">
                  <span className="h-px flex-1 bg-slate-800"></span>
-                 <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Sources Detected</span>
+                 <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">參考來源</span>
                  <span className="h-px flex-1 bg-slate-800"></span>
                </div>
                <div className="flex flex-wrap gap-2">
