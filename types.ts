@@ -1,3 +1,4 @@
+
 export enum MessageRole {
   USER = 'user',
   MODEL = 'model'
@@ -10,6 +11,17 @@ export interface GroundingChunk {
   };
 }
 
+export interface SuggestedAction {
+  label: string;
+  actionPrompt: string;
+  type: 'fundamental' | 'technical' | 'chips' | 'news' | 'chart';
+}
+
+export interface StockMetadata {
+  symbol: string;
+  name: string;
+}
+
 export interface Message {
   id: string;
   role: MessageRole;
@@ -17,13 +29,15 @@ export interface Message {
   timestamp: number;
   isThinking?: boolean;
   groundingChunks?: GroundingChunk[];
+  suggestedActions?: SuggestedAction[];
+  relatedStock?: StockMetadata; // New field to link a message to a specific stock
 }
 
-export interface MacroIndicator {
+export interface WatchlistItem {
+  id: string;
+  symbol: string;
   name: string;
-  value: string;
-  trend: 'up' | 'down' | 'neutral';
-  change: string;
+  addedAt: number;
 }
 
 export enum ViewState {

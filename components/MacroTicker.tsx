@@ -1,8 +1,10 @@
+
 import React from 'react';
 
 const MacroTicker: React.FC = () => {
   // Mock data for the visual ticker - in a real app this could be fetched or updated by the AI
   const items = [
+    { label: '加權指數 TWSE', val: '台股動向', color: 'text-rose-400' },
     { label: 'S&P 500', val: '觀察中', color: 'text-slate-400' },
     { label: 'VIX (恐慌)', val: '監控中', color: 'text-rose-400' },
     { label: '黃金 GOLD', val: '避險', color: 'text-amber-400' },
